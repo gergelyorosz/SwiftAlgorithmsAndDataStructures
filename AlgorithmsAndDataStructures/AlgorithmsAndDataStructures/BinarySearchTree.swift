@@ -12,6 +12,7 @@ class BinaryTreeNode
 {
     var left: BinaryTreeNode?
     var right: BinaryTreeNode?
+    var parent: BinaryTreeNode?
     var value: Int
     
     var isLeaf: Bool{
@@ -20,9 +21,13 @@ class BinaryTreeNode
         }
     }
     
-    init(value: Int)
-    {
+    init(value: Int) {
         self.value = value
+    }
+    
+    init(value: Int, parent: BinaryTreeNode?) {
+        self.value = value
+        self.parent = parent
     }   
 }
 
@@ -38,45 +43,79 @@ class BinarySearchTree
     
     func insert(value: Int) {
         if root == nil {
-            root = BinaryTreeNode(value: value)
+            root = BinaryTreeNode(value: value, parent: nil)
         }
         else {
-            insert(root!, nodeToInsert: BinaryTreeNode(value: value))
+            insert(root!, value: value)
         }
     }
     
-    func insert(currentNode: BinaryTreeNode, nodeToInsert: BinaryTreeNode) {
-        if nodeToInsert.value < currentNode.value {
+    func insert(currentNode: BinaryTreeNode, value: Int) {
+        if value < currentNode.value {
             if currentNode.left == nil {
-                currentNode.left = nodeToInsert
+                currentNode.left = BinaryTreeNode(value: value, parent: currentNode)
             } else {
-                insert(currentNode.left!, nodeToInsert: nodeToInsert)
+                insert(currentNode.left!, value: value)
             }
         } else {
             if currentNode.right == nil {
-                currentNode.right = nodeToInsert
+                currentNode.right = BinaryTreeNode(value: value, parent: currentNode)
             } else {
-                insert(currentNode.right!, nodeToInsert: nodeToInsert)
+                insert(currentNode.right!, value: value)
             }
         }
     }
     
-    func contains(value: Int) -> Bool {
-        return contains(self.root, value: value)
+    func delete(value: Int) {
+        let nodeToDelete = find(value)
+        delete(nodeToDelete)
     }
     
-    func contains(node: BinaryTreeNode?, value: Int) -> Bool {
+    func delete(node: BinaryTreeNode?) {
         if node == nil {
-            return false
+            return
         }
-        if node!.value == value {
-            return true
+        if node!.isLeaf {
+            replaceNodeWith(node, replacementNode: nil)
         }
-        if value < node!.value {
-            return contains(node!.left, value:value)
+        else if node!.left != nil && node!.right != nil {
+            
         }
         else {
-            return contains(node!.right, value:value)
+            if node!.left != nil {
+                replaceNodeWith(node, replacementNode: node!.left)
+            }
+            else {
+                replaceNodeWith(node, replacementNode: node!.right)
+            }
+        }
+    }
+    
+    func replaceNodeWith(node: BinaryTreeNode?, replacementNode: BinaryTreeNode?) {
+        if node == nil || node!.parent == nil {
+            return
+        }
+        if node!.parent!.left === node {
+            node!.parent!.left = replacementNode
+        }
+        if node!.parent!.right === node {
+            node!.parent!.right = replacementNode
+        }
+    }
+    
+    func find(value: Int) -> BinaryTreeNode? {
+        return find(self.root, value: value)
+    }
+    
+    func find(node: BinaryTreeNode?, value: Int) -> BinaryTreeNode? {
+        if node == nil || node!.value == value {
+            return node
+        }
+        if value < node!.value {
+            return find(node!.left, value:value)
+        }
+        else {
+            return find(node!.right, value:value)
         }
     }
     
@@ -88,8 +127,5 @@ class BinarySearchTree
             return false
         }
         return isBst(node!.left, max: node!.value, min: min) && isBst(node!.right, max: max, min: node!.value)
-    }
-    
-    func delete(value: Int) {
     }
 }

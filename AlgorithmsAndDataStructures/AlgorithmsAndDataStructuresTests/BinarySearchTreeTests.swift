@@ -49,9 +49,10 @@ class BinarySearchTreeTests: XCTestCase {
     }
     
     func testInsertThreeAscendingItems() {
-        self.tree.insert(2)
-        self.tree.insert(3)
-        self.tree.insert(4)
+        let values = [2, 3, 4]
+        for value in values {
+            self.tree.insert(value)
+        }
         
         XCTAssertNil(tree.root!.left)
         XCTAssertEqual(tree.root!.value, 2)
@@ -60,9 +61,10 @@ class BinarySearchTreeTests: XCTestCase {
     }
     
     func testInsertThreeDesccendingItems() {
-        self.tree.insert(4)
-        self.tree.insert(3)
-        self.tree.insert(2)
+        let values = [4, 3, 2]
+        for value in values {
+            self.tree.insert(value)
+        }
         
         XCTAssertNil(tree.root!.right)
         XCTAssertEqual(tree.root!.value, 4)
@@ -71,9 +73,10 @@ class BinarySearchTreeTests: XCTestCase {
     }
     
     func testInsertThreeUnorderedItems() {
-        self.tree.insert(3)
-        self.tree.insert(4)
-        self.tree.insert(2)
+        let values = [3, 4, 2]
+        for value in values {
+            self.tree.insert(value)
+        }
         
         XCTAssertEqual(tree.root!.value, 3)
         XCTAssertEqual(tree.root!.left!.value, 2)
@@ -137,27 +140,27 @@ class BinarySearchTreeTests: XCTestCase {
         XCTAssertFalse(self.tree.isValid)
     }
     
-    func testContainsReturnsFalseForEmptyTree() {
-        XCTAssertFalse(self.tree.contains(1))
+    func testFindReturnsNilForEmptyTree() {
+        XCTAssertNil(self.tree.find(1))
     }
     
-    func testContainsReturnsTrueWhenRootMatches() {
+    func testFindReturnsNonNilWhenRootMatches() {
         self.tree.insert(1)
-        XCTAssertTrue(self.tree.contains(1))
+        XCTAssertNotNil(self.tree.find(1))
     }
     
-    func testContainsReturnsTrueWhenItemInserted() {
+    func testFindReturnsTrueWhenItemInserted() {
         let values = [8, 10, 3, 14, 1, 6, 13]
         for value in values {
             self.tree.insert(value)
         }
         
         for value in values {
-            XCTAssertTrue(self.tree.contains(value))
+            XCTAssertNotNil(self.tree.find(value))
         }
     }
     
-    func testContainsReturnsFalseWhenItemNotInTree() {
+    func testFindReturnsNonNilWhenItemNotInTree() {
         let values = [8, 10, 3, 14, 1, 6, 13]
         for value in values {
             self.tree.insert(value)
@@ -165,8 +168,56 @@ class BinarySearchTreeTests: XCTestCase {
         let valuesNotInserted = [-1, 0, 2, 2, 4, 11, 15, 16]
         
         for value in valuesNotInserted {
-            XCTAssertFalse(self.tree.contains(value))
+            XCTAssertNil(self.tree.find(value))
         }
     }
-
+    
+    func testDeleteNonExistentElementDoesNothing() {
+        self.tree.insert(1)
+        self.tree.delete(2)
+        XCTAssertEqual(self.tree.root!.value, 1)
+    }
+    
+    func testDeleteLeaf() {
+        let values = [3, 4, 2]
+        for value in values {
+            self.tree.insert(value)
+        }
+        self.tree.delete(2)
+        XCTAssertEqual(self.tree.root!.value, 3)
+        XCTAssertNil(self.tree.root!.left)
+        XCTAssertEqual(self.tree.root!.right!.value, 4)
+    }
+    
+    func testDeleteNodeWithOneChild() {
+        let values = [3, 4, 2, 1]
+        for value in values {
+            self.tree.insert(value)
+        }
+        
+        XCTAssertEqual(self.tree.root!.left!.value, 2)
+        XCTAssertNotNil(self.tree.root!.left!.left)
+        
+        self.tree.delete(2)
+        XCTAssertEqual(self.tree.root!.left!.value, 1)
+        XCTAssertNil(self.tree.root!.left!.left)
+    }
+    
+    func testDeleteNodeWithTwoChildren() {
+        let values = [3, 4, 2]
+        for value in values {
+            self.tree.insert(value)
+        }
+        
+        XCTAssertEqual(self.tree.root!.value, 3)
+        XCTAssertEqual(self.tree.root!.right!.value, 4)
+        
+        self.tree.delete(3)
+        XCTAssertEqual(self.tree.root!.value, 2)
+        XCTAssertEqual(self.tree.root!.right!.value, 4)
+    }
+    
+    func testDeleteNodeWithTwoChildrenAndSubtreeUnder() {
+        // TODO: delete recursively with subtrees modifying
+    }
 }
