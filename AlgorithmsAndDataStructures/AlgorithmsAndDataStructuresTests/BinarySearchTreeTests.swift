@@ -81,13 +81,10 @@ class BinarySearchTreeTests: XCTestCase {
     }
     
     func testInsertSevenUnorderedItems() {
-        self.tree.insert(8)
-        self.tree.insert(10)
-        self.tree.insert(3)
-        self.tree.insert(14)
-        self.tree.insert(1)
-        self.tree.insert(6)
-        self.tree.insert(13)
+        let values = [8, 10, 3, 14, 1, 6, 13]
+        for value in values {
+            self.tree.insert(value)
+        }
         
         XCTAssertEqual(tree.root!.value, 8)
         XCTAssertEqual(tree.root!.left!.value, 3)
@@ -98,36 +95,31 @@ class BinarySearchTreeTests: XCTestCase {
         XCTAssertEqual(tree.root!.right!.right!.left!.value, 13)
     }
     
-    func testValidateEmptyTree()
-    {
+    func testValidateEmptyTree() {
         self.tree.root = nil
         XCTAssertTrue(self.tree.isValid)
     }
     
-    func testValidateTreeWithRootNode()
-    {
+    func testValidateTreeWithRootNode() {
         self.tree.root = BinaryTreeNode(value:1)
         XCTAssertTrue(self.tree.isValid)
     }
     
-    func testValidateValidTreeWithThreeNodes()
-    {
+    func testValidateValidTreeWithThreeNodes() {
         self.tree.root = BinaryTreeNode(value:3)
         self.tree.root!.left = BinaryTreeNode(value:2)
         self.tree.root!.right = BinaryTreeNode(value:4)
         XCTAssertTrue(self.tree.isValid)
     }
     
-    func testValidateInvalidTreeWithThreeNodes()
-    {
+    func testValidateInvalidTreeWithThreeNodes() {
         self.tree.root = BinaryTreeNode(value:3)
         self.tree.root!.left = BinaryTreeNode(value:4)
         self.tree.root!.right = BinaryTreeNode(value:2)
         XCTAssertFalse(self.tree.isValid)
     }
     
-    func testValidateValidTreeWithFiveNodes()
-    {
+    func testValidateValidTreeWithFiveNodes() {
         self.tree.root = BinaryTreeNode(value:20)
         self.tree.root!.left = BinaryTreeNode(value:10)
         self.tree.root!.right = BinaryTreeNode(value:30)
@@ -136,8 +128,7 @@ class BinarySearchTreeTests: XCTestCase {
         XCTAssertTrue(self.tree.isValid)
     }
     
-    func testValidateInvalidTreeWithFiveNodes()
-    {
+    func testValidateInvalidTreeWithFiveNodes() {
         self.tree.root = BinaryTreeNode(value:20)
         self.tree.root!.left = BinaryTreeNode(value:10)
         self.tree.root!.right = BinaryTreeNode(value:30)
@@ -145,6 +136,37 @@ class BinarySearchTreeTests: XCTestCase {
         self.tree.root!.right!.right = BinaryTreeNode(value:40)
         XCTAssertFalse(self.tree.isValid)
     }
-
+    
+    func testContainsReturnsFalseForEmptyTree() {
+        XCTAssertFalse(self.tree.contains(1))
+    }
+    
+    func testContainsReturnsTrueWhenRootMatches() {
+        self.tree.insert(1)
+        XCTAssertTrue(self.tree.contains(1))
+    }
+    
+    func testContainsReturnsTrueWhenItemInserted() {
+        let values = [8, 10, 3, 14, 1, 6, 13]
+        for value in values {
+            self.tree.insert(value)
+        }
+        
+        for value in values {
+            XCTAssertTrue(self.tree.contains(value))
+        }
+    }
+    
+    func testContainsReturnsFalseWhenItemNotInTree() {
+        let values = [8, 10, 3, 14, 1, 6, 13]
+        for value in values {
+            self.tree.insert(value)
+        }
+        let valuesNotInserted = [-1, 0, 2, 2, 4, 11, 15, 16]
+        
+        for value in valuesNotInserted {
+            XCTAssertFalse(self.tree.contains(value))
+        }
+    }
 
 }
