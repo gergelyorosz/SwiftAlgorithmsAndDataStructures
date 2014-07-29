@@ -30,6 +30,12 @@ class BinarySearchTree
 {
     var root: BinaryTreeNode?
     
+    var isValid: Bool {
+        get {
+            return isBst(self.root, max: Int.max, min: Int.min)
+        }
+    }
+    
     func insert(value: Int)
     {
         if root == nil {
@@ -56,12 +62,18 @@ class BinarySearchTree
         }
     }
     
-    func delete(value: Int)
+    func isBst(node: BinaryTreeNode?, max: Int, min: Int) -> Bool
     {
+        if node == nil {
+            return true
+        }
+        if node!.value > max || node!.value < min {
+            return false
+        }
+        return isBst(node!.left, max: node!.value, min: min) && isBst(node!.right, max: max, min: node!.value)
     }
     
-    func validatte() -> Bool
+    func delete(value: Int)
     {
-        return true
     }
 }
