@@ -213,8 +213,25 @@ class BinarySearchTreeTests: XCTestCase {
         XCTAssertEqual(self.tree.root!.right!.value, 4)
         
         self.tree.delete(3)
-        XCTAssertEqual(self.tree.root!.value, 2)
-        XCTAssertEqual(self.tree.root!.right!.value, 4)
+        XCTAssertEqual(self.tree.root!.value, 4)
+        XCTAssertEqual(self.tree.root!.left!.value, 2)
+    }
+    
+    func testRecursiveDeleteNodeWithTwoChildren() {
+        let values = [8, 3, 10, 1, 5, 4, 7]
+        for value in values {
+            self.tree.insert(value)
+        }
+        
+        XCTAssertEqual(self.tree.root!.left!.value, 3)
+        XCTAssertEqual(self.tree.root!.left!.right!.value, 5)
+        XCTAssertEqual(self.tree.root!.left!.right!.left!.value, 4)
+        XCTAssertEqual(self.tree.root!.left!.right!.right!.value, 7)
+        
+        self.tree.delete(3)
+        XCTAssertEqual(self.tree.root!.left!.value, 5)
+        XCTAssertEqual(self.tree.root!.left!.right!.value, 7)
+        XCTAssertEqual(self.tree.root!.left!.right!.left!.value, 4)
     }
     
     func testDeleteNodeWithTwoChildrenAndSubtreeUnder() {

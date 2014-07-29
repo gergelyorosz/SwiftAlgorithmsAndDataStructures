@@ -79,7 +79,8 @@ class BinarySearchTree
             replaceNodeWith(node, replacementNode: nil)
         }
         else if node!.left != nil && node!.right != nil {
-            
+            node!.value = node!.right!.value
+            delete(node!.right)
         }
         else {
             if node!.left != nil {
