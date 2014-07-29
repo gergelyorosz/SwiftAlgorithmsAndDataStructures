@@ -1,4 +1,7 @@
-SwiftAlgorithmsAndDataStuctures
-===============================
+# Algorithms and Data Structures Using Swift
+Implementing some of the most common data structures and algorithms using Swift
 
-Implementation of popular algorithms and data structures using Swift
+## Currently Implemented
+* Binary Search Tree
+
+
