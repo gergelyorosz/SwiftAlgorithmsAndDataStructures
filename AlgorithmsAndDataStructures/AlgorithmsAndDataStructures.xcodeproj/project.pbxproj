@@ -11,6 +11,9 @@
 		E3B080F71986EB530025CA5E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3B080F61986EB530025CA5E /* Images.xcassets */; };
 		E3B0810F1986ECE00025CA5E /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B0810E1986ECE00025CA5E /* BinarySearchTree.swift */; };
 		E3B081111986F42D0025CA5E /* BinarySearchTreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B081101986F42D0025CA5E /* BinarySearchTreeTests.swift */; };
+		E3B081161988D8020025CA5E /* InsertionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B081151988D8020025CA5E /* InsertionSort.swift */; };
+		E3B081191988D8200025CA5E /* SortingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B081181988D8200025CA5E /* SortingTests.swift */; };
+		E3B0811B1988DAB50025CA5E /* InsertionSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B0811A1988DAB50025CA5E /* InsertionSortTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +35,9 @@
 		E3B081011986EB530025CA5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3B0810E1986ECE00025CA5E /* BinarySearchTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
 		E3B081101986F42D0025CA5E /* BinarySearchTreeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTreeTests.swift; sourceTree = "<group>"; };
+		E3B081151988D8020025CA5E /* InsertionSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertionSort.swift; sourceTree = "<group>"; };
+		E3B081181988D8200025CA5E /* SortingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortingTests.swift; sourceTree = "<group>"; };
+		E3B0811A1988DAB50025CA5E /* InsertionSortTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertionSortTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,7 @@
 		E3B080F11986EB530025CA5E /* AlgorithmsAndDataStructures */ = {
 			isa = PBXGroup;
 			children = (
+				E3B081141988D7F20025CA5E /* Sorting */,
 				E3B0810C1986ECC80025CA5E /* DataStructures */,
 				E3B080F41986EB530025CA5E /* AppDelegate.swift */,
 				E3B080F61986EB530025CA5E /* Images.xcassets */,
@@ -92,6 +99,7 @@
 		E3B080FF1986EB530025CA5E /* AlgorithmsAndDataStructuresTests */ = {
 			isa = PBXGroup;
 			children = (
+				E3B081171988D8080025CA5E /* Sorting */,
 				E3B0810D1986ECD10025CA5E /* DataStructures */,
 				E3B081001986EB530025CA5E /* Supporting Files */,
 			);
@@ -120,6 +128,23 @@
 				E3B081101986F42D0025CA5E /* BinarySearchTreeTests.swift */,
 			);
 			name = DataStructures;
+			sourceTree = "<group>";
+		};
+		E3B081141988D7F20025CA5E /* Sorting */ = {
+			isa = PBXGroup;
+			children = (
+				E3B081151988D8020025CA5E /* InsertionSort.swift */,
+			);
+			name = Sorting;
+			sourceTree = "<group>";
+		};
+		E3B081171988D8080025CA5E /* Sorting */ = {
+			isa = PBXGroup;
+			children = (
+				E3B081181988D8200025CA5E /* SortingTests.swift */,
+				E3B0811A1988DAB50025CA5E /* InsertionSortTests.swift */,
+			);
+			name = Sorting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3B081161988D8020025CA5E /* InsertionSort.swift in Sources */,
 				E3B0810F1986ECE00025CA5E /* BinarySearchTree.swift in Sources */,
 				E3B080F51986EB530025CA5E /* AppDelegate.swift in Sources */,
 			);
@@ -228,7 +254,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3B081191988D8200025CA5E /* SortingTests.swift in Sources */,
 				E3B081111986F42D0025CA5E /* BinarySearchTreeTests.swift in Sources */,
+				E3B0811B1988DAB50025CA5E /* InsertionSortTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
