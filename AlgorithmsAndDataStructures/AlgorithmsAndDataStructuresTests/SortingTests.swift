@@ -50,6 +50,7 @@ class SortingTests
     class func expectArraysEqual(array: Int[], arrayToCompareWith: Int[]) {
         XCTAssertEqual(array.count, arrayToCompareWith.count)
         for(var i=0; i < array.count; i++) {
+            println("comparing \(array[i]) with \(arrayToCompareWith[i])")
             XCTAssertEqual(array[i], arrayToCompareWith[i])
         }
     }
