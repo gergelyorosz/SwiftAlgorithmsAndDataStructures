@@ -30,5 +30,17 @@ class InsertionSortTests: XCTestCase {
     func testSortingArrayWithMultipleItemsSortedExceptForOne() {
         SortingTests.testSortingArrayWithMultipleItemsSortedExceptForOne(InsertionSort.sort)
     }
+    
+    func testSortingArrayWithMultipleItemsInRandomOrder() {
+        SortingTests.testSortingArrayWithMultipleItemsInRandomOrder(InsertionSort.sort)
+    }
+    
+    func testSortingArrayWithMultipleItemsInCorrectOrder() {
+        SortingTests.testSortingArrayWithMultipleItemsInCorrectOrder(InsertionSort.sort)
+    }
+    
+    func testSortingArrayWithMultipleItemsInReverseOrder() {
+        SortingTests.testSortingArrayWithMultipleItemsInReverseOrder(InsertionSort.sort)
+    }
 
 }

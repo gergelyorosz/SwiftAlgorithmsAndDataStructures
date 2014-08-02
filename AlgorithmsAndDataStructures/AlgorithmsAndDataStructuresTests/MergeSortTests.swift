@@ -31,4 +31,15 @@ class MergeSortTests: XCTestCase {
         SortingTests.testSortingArrayWithMultipleItemsSortedExceptForOne(MergeSort.sort)
     }
     
+    func testSortingArrayWithMultipleItemsInRandomOrder() {
+        SortingTests.testSortingArrayWithMultipleItemsInRandomOrder(MergeSort.sort)
+    }
+    
+    func testSortingArrayWithMultipleItemsInCorrectOrder() {
+        SortingTests.testSortingArrayWithMultipleItemsInCorrectOrder(MergeSort.sort)
+    }
+    
+    func testSortingArrayWithMultipleItemsInReverseOrder() {
+        SortingTests.testSortingArrayWithMultipleItemsInReverseOrder(MergeSort.sort)
+    }
 }

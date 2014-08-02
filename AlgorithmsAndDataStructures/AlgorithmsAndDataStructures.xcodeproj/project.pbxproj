@@ -16,6 +16,8 @@
 		E3B0811B1988DAB50025CA5E /* InsertionSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B0811A1988DAB50025CA5E /* InsertionSortTests.swift */; };
 		E3B0811F198A2FC40025CA5E /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B0811E198A2FC40025CA5E /* MergeSort.swift */; };
 		E3B08121198A2FF50025CA5E /* MergeSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B08120198A2FF50025CA5E /* MergeSortTests.swift */; };
+		E3B08123198D3E5B0025CA5E /* HeapSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B08122198D3E5B0025CA5E /* HeapSort.swift */; };
+		E3B08125198D3E840025CA5E /* HeapSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B08124198D3E840025CA5E /* HeapSortTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		E3B0811A1988DAB50025CA5E /* InsertionSortTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertionSortTests.swift; sourceTree = "<group>"; };
 		E3B0811E198A2FC40025CA5E /* MergeSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MergeSort.swift; sourceTree = "<group>"; };
 		E3B08120198A2FF50025CA5E /* MergeSortTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MergeSortTests.swift; sourceTree = "<group>"; };
+		E3B08122198D3E5B0025CA5E /* HeapSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeapSort.swift; sourceTree = "<group>"; };
+		E3B08124198D3E840025CA5E /* HeapSortTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeapSortTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,7 @@
 			children = (
 				E3B081151988D8020025CA5E /* InsertionSort.swift */,
 				E3B0811E198A2FC40025CA5E /* MergeSort.swift */,
+				E3B08122198D3E5B0025CA5E /* HeapSort.swift */,
 			);
 			name = Sorting;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 				E3B081181988D8200025CA5E /* SortingTests.swift */,
 				E3B0811A1988DAB50025CA5E /* InsertionSortTests.swift */,
 				E3B08120198A2FF50025CA5E /* MergeSortTests.swift */,
+				E3B08124198D3E840025CA5E /* HeapSortTests.swift */,
 			);
 			name = Sorting;
 			sourceTree = "<group>";
@@ -254,6 +260,7 @@
 				E3B0810F1986ECE00025CA5E /* BinarySearchTree.swift in Sources */,
 				E3B0811F198A2FC40025CA5E /* MergeSort.swift in Sources */,
 				E3B080F51986EB530025CA5E /* AppDelegate.swift in Sources */,
+				E3B08123198D3E5B0025CA5E /* HeapSort.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +271,7 @@
 				E3B081191988D8200025CA5E /* SortingTests.swift in Sources */,
 				E3B081111986F42D0025CA5E /* BinarySearchTreeTests.swift in Sources */,
 				E3B08121198A2FF50025CA5E /* MergeSortTests.swift in Sources */,
+				E3B08125198D3E840025CA5E /* HeapSortTests.swift in Sources */,
 				E3B0811B1988DAB50025CA5E /* InsertionSortTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

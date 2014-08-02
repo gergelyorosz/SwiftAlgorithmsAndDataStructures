@@ -25,8 +25,6 @@ class MergeSort
         var leftArray = mergeSort(createArrayFrom(array, startIndex: 0, endIndex: midPoint))
         var rightArray = mergeSort(createArrayFrom(array, startIndex: midPoint, endIndex: array.count))
         
-        println("array size: \(array.count). left size: \(leftArray.count) right size: \(rightArray.count)")
-        
         var iLeft = 0, iRight = 0;
         for(var i=0; i < array.count; i++) {
             if(iRight >= rightArray.count) {

@@ -41,6 +41,25 @@ class SortingTests
             sortMethod: sortMethod)
     }
     
+    class func testSortingArrayWithMultipleItemsInRandomOrder(sortMethod: (Int[])->Void) {
+        testSortingOnArrays([6, 1, 3, 5, 2, 8, 7, 4],
+            expectedResult: [1, 2, 3, 4, 5, 6, 7, 8],
+            sortMethod: sortMethod)
+    }
+    
+    class func testSortingArrayWithMultipleItemsInCorrectOrder(sortMethod: (Int[])->Void) {
+        testSortingOnArrays([1, 2, 3, 4, 5, 6, 7, 8],
+            expectedResult: [1, 2, 3, 4, 5, 6, 7, 8],
+            sortMethod: sortMethod)
+    }
+    
+    class func testSortingArrayWithMultipleItemsInReverseOrder(sortMethod: (Int[])->Void) {
+        testSortingOnArrays([8, 7, 6, 5, 4, 3, 2, 1],
+            expectedResult: [1, 2, 3, 4, 5, 6, 7, 8],
+            sortMethod: sortMethod)
+    }
+
+    
     class func testSortingOnArrays(array: Int[], expectedResult: Int[], sortMethod: (Int[])->Void) {
         NSLog("array size is \(array.count)")
         sortMethod(array)
