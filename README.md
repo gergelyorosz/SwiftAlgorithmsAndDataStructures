@@ -8,6 +8,7 @@ Implementing some of the most common data structures and algorithms using Swift
 ### Sorting Algorithms
 * Insertion Sort
 * Merge Sort
+* Heap Sort
 
 
 
