@@ -42,4 +42,8 @@ class HeapSortTests: XCTestCase {
     func testSortingArrayWithMultipleItemsInReverseOrder() {
         SortingTests.testSortingArrayWithMultipleItemsInReverseOrder(HeapSort.sort)
     }
+    
+    func testSortingArrayWithMultipleMatchingValuesInRandomOrder() {
+        SortingTests.testSortingArrayWithMultipleItemsInReverseOrder(HeapSort.sort)
+    }
 }

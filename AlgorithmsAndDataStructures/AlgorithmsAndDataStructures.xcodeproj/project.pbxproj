@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E319B93F1997B24400648129 /* CountingSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = E319B93E1997B24400648129 /* CountingSort.swift */; };
+		E319B9411997B25E00648129 /* CountingSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E319B9401997B25E00648129 /* CountingSortTests.swift */; };
 		E3B080F51986EB530025CA5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B080F41986EB530025CA5E /* AppDelegate.swift */; };
 		E3B080F71986EB530025CA5E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3B080F61986EB530025CA5E /* Images.xcassets */; };
 		E3B0810F1986ECE00025CA5E /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B0810E1986ECE00025CA5E /* BinarySearchTree.swift */; };
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E319B93E1997B24400648129 /* CountingSort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingSort.swift; sourceTree = "<group>"; };
+		E319B9401997B25E00648129 /* CountingSortTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingSortTests.swift; sourceTree = "<group>"; };
 		E3B080EF1986EB530025CA5E /* AlgorithmsAndDataStructures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlgorithmsAndDataStructures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3B080F31986EB530025CA5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3B080F41986EB530025CA5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				E3B081151988D8020025CA5E /* InsertionSort.swift */,
+				E319B93E1997B24400648129 /* CountingSort.swift */,
 				E3B938911996311D00DD5630 /* QuickSort.swift */,
 				E3B0811E198A2FC40025CA5E /* MergeSort.swift */,
 				E3B08122198D3E5B0025CA5E /* HeapSort.swift */,
@@ -158,6 +163,7 @@
 			children = (
 				E3B081181988D8200025CA5E /* SortingTests.swift */,
 				E3B0811A1988DAB50025CA5E /* InsertionSortTests.swift */,
+				E319B9401997B25E00648129 /* CountingSortTests.swift */,
 				E3B08120198A2FF50025CA5E /* MergeSortTests.swift */,
 				E3B08124198D3E840025CA5E /* HeapSortTests.swift */,
 				E3B938931996313D00DD5630 /* QuickSortTests.swift */,
@@ -265,6 +271,7 @@
 				E3B081161988D8020025CA5E /* InsertionSort.swift in Sources */,
 				E3B938921996311D00DD5630 /* QuickSort.swift in Sources */,
 				E3B0810F1986ECE00025CA5E /* BinarySearchTree.swift in Sources */,
+				E319B93F1997B24400648129 /* CountingSort.swift in Sources */,
 				E3B0811F198A2FC40025CA5E /* MergeSort.swift in Sources */,
 				E3B080F51986EB530025CA5E /* AppDelegate.swift in Sources */,
 				E3B08123198D3E5B0025CA5E /* HeapSort.swift in Sources */,
@@ -278,6 +285,7 @@
 				E3B081191988D8200025CA5E /* SortingTests.swift in Sources */,
 				E3B081111986F42D0025CA5E /* BinarySearchTreeTests.swift in Sources */,
 				E3B08121198A2FF50025CA5E /* MergeSortTests.swift in Sources */,
+				E319B9411997B25E00648129 /* CountingSortTests.swift in Sources */,
 				E3B08125198D3E840025CA5E /* HeapSortTests.swift in Sources */,
 				E3B0811B1988DAB50025CA5E /* InsertionSortTests.swift in Sources */,
 				E3B938941996313D00DD5630 /* QuickSortTests.swift in Sources */,

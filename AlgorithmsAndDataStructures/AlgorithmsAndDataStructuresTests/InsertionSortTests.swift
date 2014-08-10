@@ -42,5 +42,9 @@ class InsertionSortTests: XCTestCase {
     func testSortingArrayWithMultipleItemsInReverseOrder() {
         SortingTests.testSortingArrayWithMultipleItemsInReverseOrder(InsertionSort.sort)
     }
+    
+    func testSortingArrayWithMultipleMatchingValuesInRandomOrder() {
+        SortingTests.testSortingArrayWithMultipleItemsInReverseOrder(InsertionSort.sort)
+    }
 
 }

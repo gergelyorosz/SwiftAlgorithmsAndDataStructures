@@ -9,41 +9,42 @@
 import XCTest
 import AlgorithmsAndDataStructures
 
-class MergeSortTests: XCTestCase {
+class CountingSortTests: XCTestCase {
     
     func testSortingAnEmptyArray() {
-        SortingTests.testSortingAnEmptyArray(MergeSort.sort)
+        SortingTests.testSortingAnEmptyArray(CountingSort.sort)
     }
     
     func testSortingArrayWithOneItem() {
-        SortingTests.testSortingArrayWithOneItem(MergeSort.sort)
+        SortingTests.testSortingArrayWithOneItem(CountingSort.sort)
     }
     
     func testSortingArrayWithTwoItemsInOrder() {
-        SortingTests.testSortingArrayWithTwoItemsInOrder(MergeSort.sort)
+        SortingTests.testSortingArrayWithTwoItemsInOrder(CountingSort.sort)
     }
     
     func testSortingArrayWithTwoItemsInReversedOrder() {
-        SortingTests.testSortingArrayWithTwoItemsInReversedOrder(MergeSort.sort)
+        SortingTests.testSortingArrayWithTwoItemsInReversedOrder(CountingSort.sort)
     }
     
     func testSortingArrayWithMultipleItemsSortedExceptForOne() {
-        SortingTests.testSortingArrayWithMultipleItemsSortedExceptForOne(MergeSort.sort)
+        SortingTests.testSortingArrayWithMultipleItemsSortedExceptForOne(CountingSort.sort)
     }
     
     func testSortingArrayWithMultipleItemsInRandomOrder() {
-        SortingTests.testSortingArrayWithMultipleItemsInRandomOrder(MergeSort.sort)
+        SortingTests.testSortingArrayWithMultipleItemsInRandomOrder(CountingSort.sort)
     }
     
     func testSortingArrayWithMultipleItemsInCorrectOrder() {
-        SortingTests.testSortingArrayWithMultipleItemsInCorrectOrder(MergeSort.sort)
+        SortingTests.testSortingArrayWithMultipleItemsInCorrectOrder(CountingSort.sort)
     }
     
     func testSortingArrayWithMultipleItemsInReverseOrder() {
-        SortingTests.testSortingArrayWithMultipleItemsInReverseOrder(MergeSort.sort)
+        SortingTests.testSortingArrayWithMultipleItemsInReverseOrder(CountingSort.sort)
     }
     
     func testSortingArrayWithMultipleMatchingValuesInRandomOrder() {
-        SortingTests.testSortingArrayWithMultipleItemsInReverseOrder(MergeSort.sort)
+        SortingTests.testSortingArrayWithMultipleItemsInReverseOrder(CountingSort.sort)
     }
+    
 }

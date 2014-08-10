@@ -59,6 +59,11 @@ class SortingTests
             sortMethod: sortMethod)
     }
 
+    class func testSortingArrayWithMultipleMatchingValuesInRandomOrder(sortMethod: (Int[])->Void) {
+        testSortingOnArrays([6, 1, 1, 3, 5, 3, 2, 8, 7, 4, 5],
+            expectedResult: [1, 1, 2, 3, 3, 4, 5, 5, 6, 7, 8],
+            sortMethod: sortMethod)
+    }
     
     class func testSortingOnArrays(array: Int[], expectedResult: Int[], sortMethod: (Int[])->Void) {
         NSLog("array size is \(array.count)")

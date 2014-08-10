@@ -43,4 +43,8 @@ class QuickSortTests: XCTestCase {
         SortingTests.testSortingArrayWithMultipleItemsInReverseOrder(QuickSort.sort)
     }
     
+    func testSortingArrayWithMultipleMatchingValuesInRandomOrder() {
+        SortingTests.testSortingArrayWithMultipleItemsInReverseOrder(QuickSort.sort)
+    }
+    
 }
