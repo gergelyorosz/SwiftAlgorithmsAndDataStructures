@@ -9,7 +9,7 @@
 import XCTest
 import AlgorithmsAndDataStructures
 
-/*class BinarySearchTreeTests: XCTestCase {
+class BinarySearchTreeTests: XCTestCase {
 
     var tree: BinarySearchTree = BinarySearchTree()
     
@@ -233,8 +233,4 @@ import AlgorithmsAndDataStructures
         XCTAssertEqual(self.tree.root!.left!.right!.value, 7)
         XCTAssertEqual(self.tree.root!.left!.right!.left!.value, 4)
     }
-    
-    func testDeleteNodeWithTwoChildrenAndSubtreeUnder() {
-        // TODO: delete recursively with subtrees modifying
-    }
-}*/
+}

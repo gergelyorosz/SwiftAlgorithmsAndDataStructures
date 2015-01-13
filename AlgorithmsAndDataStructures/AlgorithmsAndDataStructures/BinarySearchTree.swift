@@ -35,6 +35,9 @@ class BinarySearchTree
 {
     var root: BinaryTreeNode?
     
+    init() {
+    }
+    
     var isValid: Bool {
         get {
             return isBst(self.root, max: Int.max, min: Int.min)

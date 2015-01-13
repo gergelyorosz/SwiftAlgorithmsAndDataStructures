@@ -27,6 +27,7 @@
 		F59FC88D1A65CCEC00D02EAE /* QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B938911996311D00DD5630 /* QuickSort.swift */; };
 		F59FC88E1A65CCEC00D02EAE /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B0811E198A2FC40025CA5E /* MergeSort.swift */; };
 		F59FC88F1A65CCEC00D02EAE /* HeapSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B08122198D3E5B0025CA5E /* HeapSort.swift */; };
+		F59FC8901A65D71000D02EAE /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B0810E1986ECE00025CA5E /* BinarySearchTree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -292,6 +293,7 @@
 				F59FC88D1A65CCEC00D02EAE /* QuickSort.swift in Sources */,
 				F59FC88B1A65CCEC00D02EAE /* InsertionSort.swift in Sources */,
 				E3B081111986F42D0025CA5E /* BinarySearchTreeTests.swift in Sources */,
+				F59FC8901A65D71000D02EAE /* BinarySearchTree.swift in Sources */,
 				F59FC88C1A65CCEC00D02EAE /* CountingSort.swift in Sources */,
 				E3B08121198A2FF50025CA5E /* MergeSortTests.swift in Sources */,
 				F59FC88F1A65CCEC00D02EAE /* HeapSort.swift in Sources */,
