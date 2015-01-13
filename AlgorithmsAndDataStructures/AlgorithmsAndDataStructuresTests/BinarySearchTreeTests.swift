@@ -9,7 +9,7 @@
 import XCTest
 import AlgorithmsAndDataStructures
 
-class BinarySearchTreeTests: XCTestCase {
+/*class BinarySearchTreeTests: XCTestCase {
 
     var tree: BinarySearchTree = BinarySearchTree()
     
@@ -237,4 +237,4 @@ class BinarySearchTreeTests: XCTestCase {
     func testDeleteNodeWithTwoChildrenAndSubtreeUnder() {
         // TODO: delete recursively with subtrees modifying
     }
-}
+}*/

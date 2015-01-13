@@ -10,7 +10,7 @@ import Foundation
 
 class InsertionSort
 {
-    class func sort(array: Int[]) {
+    class func sort(inout array: [Int]) {
         for(var i = 1; i < array.count; i++) {
             let currentValue = array[i]
             var j = i - 1;

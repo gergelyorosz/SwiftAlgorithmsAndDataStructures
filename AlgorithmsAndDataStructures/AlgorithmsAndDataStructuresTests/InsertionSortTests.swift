@@ -9,7 +9,7 @@
 import XCTest
 import AlgorithmsAndDataStructures
 
-class InsertionSortTests: XCTestCase {    
+class InsertionSortTests: XCTestCase {
    
     func testSortingAnEmptyArray() {
         SortingTests.testSortingAnEmptyArray(InsertionSort.sort)

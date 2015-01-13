@@ -22,6 +22,11 @@
 		E3B08125198D3E840025CA5E /* HeapSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B08124198D3E840025CA5E /* HeapSortTests.swift */; };
 		E3B938921996311D00DD5630 /* QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B938911996311D00DD5630 /* QuickSort.swift */; };
 		E3B938941996313D00DD5630 /* QuickSortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B938931996313D00DD5630 /* QuickSortTests.swift */; };
+		F59FC88B1A65CCEC00D02EAE /* InsertionSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B081151988D8020025CA5E /* InsertionSort.swift */; };
+		F59FC88C1A65CCEC00D02EAE /* CountingSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = E319B93E1997B24400648129 /* CountingSort.swift */; };
+		F59FC88D1A65CCEC00D02EAE /* QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B938911996311D00DD5630 /* QuickSort.swift */; };
+		F59FC88E1A65CCEC00D02EAE /* MergeSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B0811E198A2FC40025CA5E /* MergeSort.swift */; };
+		F59FC88F1A65CCEC00D02EAE /* HeapSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B08122198D3E5B0025CA5E /* HeapSort.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -282,9 +287,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F59FC88E1A65CCEC00D02EAE /* MergeSort.swift in Sources */,
 				E3B081191988D8200025CA5E /* SortingTests.swift in Sources */,
+				F59FC88D1A65CCEC00D02EAE /* QuickSort.swift in Sources */,
+				F59FC88B1A65CCEC00D02EAE /* InsertionSort.swift in Sources */,
 				E3B081111986F42D0025CA5E /* BinarySearchTreeTests.swift in Sources */,
+				F59FC88C1A65CCEC00D02EAE /* CountingSort.swift in Sources */,
 				E3B08121198A2FF50025CA5E /* MergeSortTests.swift in Sources */,
+				F59FC88F1A65CCEC00D02EAE /* HeapSort.swift in Sources */,
 				E319B9411997B25E00648129 /* CountingSortTests.swift in Sources */,
 				E3B08125198D3E840025CA5E /* HeapSortTests.swift in Sources */,
 				E3B0811B1988DAB50025CA5E /* InsertionSortTests.swift in Sources */,
@@ -386,7 +396,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = AlgorithmsAndDataStructures/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -398,7 +408,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = AlgorithmsAndDataStructures/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

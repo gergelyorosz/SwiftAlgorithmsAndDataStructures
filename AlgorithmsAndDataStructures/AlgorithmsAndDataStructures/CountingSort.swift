@@ -10,7 +10,7 @@ import Foundation
 
 class CountingSort
 {
-    class func sort(array: Int[]) {
+    class func sort(inout array: [Int]) {
         var maxValue = getMaxValue(array)
         var sortedArray = countingSort(array, maxValue: maxValue)
         for var i = 0; i < array.count; i++ {
@@ -18,10 +18,10 @@ class CountingSort
         }
     }
     
-    class func countingSort(array: Int[], maxValue: Int) -> Int[]{
+    class func countingSort(array: [Int], maxValue: Int) -> [Int]{
         var countingArray = createCountingArray(array, maxValue: maxValue)
         
-        var outputArray = Int[](count: array.count, repeatedValue: 0)
+        var outputArray = [Int](count: array.count, repeatedValue: 0)
         for value in array {
             let outputPosition = countingArray[value] - 1
             outputArray[outputPosition] = value
@@ -31,8 +31,8 @@ class CountingSort
         return outputArray
     }
     
-    class func createCountingArray(array: Int[], maxValue: Int) -> Int[] {
-        var countingArray = Int[](count: maxValue + 1, repeatedValue: 0)
+    class func createCountingArray(array: [Int], maxValue: Int) -> [Int] {
+        var countingArray = [Int](count: maxValue + 1, repeatedValue: 0)
         
         for value in array {
             countingArray[value] += 1
@@ -44,7 +44,7 @@ class CountingSort
         return countingArray
     }
     
-    class func getMaxValue(array: Int[]) -> Int {
+    class func getMaxValue(array: [Int]) -> Int {
         var max = 0
         for value in array {
             if value > max {
