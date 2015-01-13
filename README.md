@@ -1,14 +1,19 @@
 # Algorithms and Data Structures Using Swift
-Implementing some of the most common data structures and algorithms using Swift
+Implementing some of the most well known sorting algorithms and data structures using Swift
+Target Xcode version: v6.1.1
 
 ## Currently Implemented
-### Data Structures
-* Binary Search Tree
 
 ### Sorting Algorithms
 * Insertion Sort
 * Merge Sort
 * Heap Sort
+* Quicksort
+* Counting Sort
+
+### Data Structures
+* Binary Search Tree
+
 
 
 
