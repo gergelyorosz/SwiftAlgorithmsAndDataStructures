@@ -1,6 +1,5 @@
 ## Algorithms & Data Structures Using Swift
 Implementing some of the most well known sorting algorithms and data structures using Swift
-Target Xcode version: v6.1.1
 
 ### Currently Implemented
 
@@ -13,6 +12,9 @@ Target Xcode version: v6.1.1
 
 #### Data Structures
 * Binary Search Tree
+
+#### Build information
+Target Xcode version: 6.1.1
 
 
 
